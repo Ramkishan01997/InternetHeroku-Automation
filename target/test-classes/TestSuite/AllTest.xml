@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="AllTest" verbose="1" >
+  <test name="NegativeUserName" >
+    <classes>
+       <class name="com.herokuapp.theinternet.NegativeUserName" />
+    </classes>
+  </test>
+ 
+  <test name="Positivecase">
+    <classes>
+      <class name="com.herokuapp.theinternet.PositiveCase"/>
+     <!-- <class name="test.sample.ParameterTest"/> --> 
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,56 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="NegativetestSuites" verbose="1">
+	<test name="Positivecase">
+		<parameter name="browser" value="chrome" />
+		<groups>
+			<run>
+				<include name="positiveTests"></include>
+
+			</run>
+		</groups>
+		<classes>
+			<class name="com.herokuapp.theinternet.LoginTest" />
+			<!-- <class name="test.sample.ParameterTest"/> -->
+		</classes>
+	</test>
+
+	<test name="NegativeUserName">
+		<parameter name="browser" value="chrome" />
+		<parameter name="username" value="tomsermith" />
+		<parameter name="password" value="SuperSecretPassword" />
+		<parameter name="expText" value="Your username is invalid!" />
+
+		<!-- <groups>
+			<run>
+				<include name='SmokeTest'/>
+			</run>
+		</groups>-->
+		<classes>
+			<class name="com.herokuapp.theinternet.LoginTest">
+				<methods>
+					<include name="negativeLoginTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="NegativePassword">
+		<parameter name="browser" value="edge" />
+		<parameter name="username" value="tomsmith" />
+		<parameter name="password" value="jhbfjjbh" />
+		<parameter name="expText" value="Your password is invalid!" />
+
+		<!-- <groups>
+			<run>
+				<include name='SmokeTest'/>
+			</run>
+		</groups>-->
+		<classes>
+			<class name="com.herokuapp.theinternet.LoginTest">
+				<methods>
+					<include name="negativeLoginTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
